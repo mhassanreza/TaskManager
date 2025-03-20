@@ -1,19 +1,28 @@
 [versions]
 agp = "8.9.0"
-kotlin = "2.0.21"
+kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
-composeBom = "2024.09.00"
+composeBom = "2025.03.00"
+navVersion = "2.8.9"
+coroutine = "1.8.0"
+hiltVersion = "2.52"
+hiltNavigationVersion = "1.2.0"
+composeMaterial = "1.7.8"
+roomVersion = "2.6.1"
+serialization = "1.7.1"
+kspVersion = "2.0.20-1.0.25"
+mockitoCore = "5.12.0"
+mockitoKotlin = "5.3.1"
+datastore = "1.1.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -21,12 +30,49 @@ androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# Test libs
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoCore" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine" }
+
+# Material3
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+# Jetpack Compose Navigation Support
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
+# kotlinx Serialization
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+# Kotlinx Coroutine
+kotlinx-coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
+# Hilt DI
+androidx-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+androidx-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
+androidx-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationVersion" }
+# EXTENDED MATERIAL ICONS :->
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeMaterial" }
+# Room
+androidx-room = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
+# GOOGLE FONTS :->
+androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "composeMaterial" }
+androidx-foundation-android = { group = "androidx.compose.foundation", name = "foundation-android", version.ref = "composeMaterial" }
+androidx-ui-graphics-android = { group = "androidx.compose.ui", name = "ui-graphics-android", version.ref = "composeMaterial" }
+#// Datastore
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+android-ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 

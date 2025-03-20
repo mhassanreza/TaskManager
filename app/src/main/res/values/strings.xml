@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">TaskManager</string>
+    <string name="task_manager_label">Task Manager</string>
+    <string name="add_task_label">Add Task</string>
+    <string name="save_task_label">Save Task</string>
+    <string name="ok_label">OK</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="task_details_label">Task Details</string>
+    <string name="mark_incomplete_label">Mark Incomplete</string>
+    <string name="mark_complete_label">Mark Complete</string>
+    <string name="delete_task_label">Delete Task</string>
+    <string name="complete_label">Completed</string>
+    <string name="pending_label">Pending</string>
+
+    <string name="label_description">Description</string>
+    <string name="label_priority">Priority</string>
+    <string name="label_due">Due</string>
+    <string name="label_status">Status</string>
 </resources>
